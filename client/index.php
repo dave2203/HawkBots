@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Hauck bots</title>
+    <title>Hawk Bots</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="dron, turism, travel, quadropter">
     <meta name="author" content="Hauk bots">
@@ -47,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html"><img src="assets/img/logosmall.png" alt="MAXIMUM"></a>
+          <a class="brand" href="index.html"><img src="images/logosmall.png" alt="Hawk Bots"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
             	<li class="dropdown active">
@@ -194,7 +194,7 @@
     <div id="mainContainer" class="container-fluid">
         <div class="row-fluid">
             <div class="span6 hero-unit rightline">
-                <h1>Intruccions/Tutorial</h1>
+                <h1>Instructions/Tutorial</h1>
                 <p>See a tutorial about how control the device.</p>
                 <div class="middle">
                     <p>
@@ -224,13 +224,13 @@
 	<p><a href="#">GET DIRECTIONS</a></p>
 	<br>
 	<div class="social_icons">
-		<a href="#"><img src="assets/img/social/white/dribbble.png" width="30" height="30" alt="Dribbble"></a>
-		<a href="#"><img src="assets/img/social/white/facebook.png" width="30" height="30" alt="Facebook"></a>
-		<a href="#"><img src="assets/img/social/white/gplus.png" width="30" height="30" alt="GooglePlus"></a>
-		<a href="#"><img src="assets/img/social/white/instagram.png" width="30" height="30" alt="Instagram"></a>
-		<a href="#"><img src="assets/img/social/white/linkedin.png" width="30" height="30" alt="LinkedIn"></a>
-		<a href="#"><img src="assets/img/social/white/pinterest.png" width="30" height="30" alt="Pinterest"></a>
-		<a href="#"><img src="assets/img/social/white/twitter.png" width="30" height="30" alt="Twitter"></a>
+		<a href="#"><img src="images/social/white/dribbble.png" width="30" height="30" alt="Dribbble"></a>
+		<a href="#"><img src="images/social/white/facebook.png" width="30" height="30" alt="Facebook"></a>
+		<a href="#"><img src="images/social/white/gplus.png" width="30" height="30" alt="GooglePlus"></a>
+		<a href="#"><img src="images/social/white/instagram.png" width="30" height="30" alt="Instagram"></a>
+		<a href="#"><img src="images/social/white/linkedin.png" width="30" height="30" alt="LinkedIn"></a>
+		<a href="#"><img src="images/social/white/pinterest.png" width="30" height="30" alt="Pinterest"></a>
+		<a href="#"><img src="images/social/white/twitter.png" width="30" height="30" alt="Twitter"></a>
 	</div><!-- End of social icons -->
 
 	
