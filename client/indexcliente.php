@@ -59,7 +59,7 @@
             	<li class="dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Recorridos <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="index7.html">Catalogo</a></li>
+                    	<li><a id="a_catalogo" href="#">Catalogo</a></li>
                     </ul>
             	</li>
             	<li class="dropdown">
@@ -129,8 +129,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!--
     <script type="text/javascript" src="js/jquery.js"></script>
-    
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	-->
 	<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="js/onepage/js/main.js"></script>

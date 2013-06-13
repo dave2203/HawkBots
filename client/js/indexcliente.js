@@ -7,3 +7,6 @@ $(document).on("ready",function(){
 	var loadUrlIni = "AJAXpages/index_inicio.php";
 	var loadUrlAddUsr = "AJAXpages/admon_user_add.php";
 });
+
+
+a_catalogo
