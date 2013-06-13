@@ -47,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html"><img src="images/logosmall.png" alt="Hawk Bots"></a>
+          <a class="brand" href="indexcliente.php"><img src="images/logo/HackBotsLogoBlanco_68x19pix.png" alt="Hawk Bots logo"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
             	<li class="dropdown active">
