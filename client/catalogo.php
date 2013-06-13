@@ -1,6 +1,6 @@
 
 <?php
-	include_once("../coneccion/conn.php");
+	include_once("coneccion/conn.php");
 	$link = conn();
 	$querySelect =" SELECT
 		vuelo.idVuelo,
@@ -59,9 +59,9 @@
 			<td><?php echo "Place" ?></td>
 			<td><?php echo "Name" ?></td>
 			<td><?php echo "Random pictur" ?></td>
-			<td><input id="videodemo-btn" type="button" value="See demo"/></td>
-			<td><?php echo htmlentities($row['Avalaible']) ?></td>
-			<td>Details</td>
+			<td><input id="videodemo-btn" type="button" value="See video demo"/></td>
+			<td><?php echo htmlentities($row['Avalaible']); ?></td>
+			<td><a href="indexcliente.php?menu=vue_det&v=2">Ver</a></td>
 		</tr>
 		<?php
 			} while ($row = mysql_fetch_assoc($result));

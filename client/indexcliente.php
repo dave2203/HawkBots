@@ -1,3 +1,8 @@
+<?php
+	if(!isset($_GET["menu"]) ){
+		$_GET["menu"]="prcp";	//index_content.php es la pagina de presentacion inicial.
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,7 +64,7 @@
             	<li class="dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Recorridos <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a id="a_catalogo" href="#">Catalogo</a></li>
+                    	<li><a href="indexcliente.php?menu=catv">Catalogo</a></li>
                     </ul>
             	</li>
             	<li class="dropdown">
@@ -98,7 +103,13 @@
     </section><!-- #slider -->
     <div id="mainContainer" class="container-fluid">
         <div class="row-fluid">
-        	<img src="images/logo/HackBotsLogo_2667x729px.png" />
+        	<div id="content-div">
+        		<?php
+					if(isset($_GET["menu"]) ){
+						require('indexcliente_contentloader.php');
+					}
+				?>			  
+			</div>
         </div>
     </div>
     <hr>
@@ -136,6 +147,6 @@
 	<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="js/onepage/js/main.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-
+	<script type="text/javascript" src="js/indexcliente.js"></script>
   </body>
 </html>

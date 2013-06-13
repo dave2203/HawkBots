@@ -7,6 +7,12 @@
 //echo htmlentities($row['_message']);
 //http://net.tutsplus.com/tutorials/php/pdo-vs-mysqli-which-should-you-use/
 
+/**
+ * Open a connection with database
+ *
+ * @return db conecction
+ * @author  
+ */
 function conn(){
 	//$user = "dexter_david";
 	//$pass = "david";
