@@ -215,11 +215,11 @@
     </div>
     <hr>
 	<div id="footerwrap">
-	<em>MADE IN MADRID</em>
+	<em>MADE IN MEXICO</em>
 	<br>
 	<br>
-	<p>ST. PATRICK AVE.</p>
-	<p>2099, MADRID</p>
+	<p>Tijuana</p>
+	<p>C.P. ###, Mexico</p>
 	<br>
 	<p><a href="#">GET DIRECTIONS</a></p>
 	<br>

@@ -1,0 +1,2 @@
+Aca van las paginas que se inclustan en la plantilla del sitio (tambien conocido como master page).
+La plantilla del sitio es el archivo indexcliente.php e indexempresa.php
