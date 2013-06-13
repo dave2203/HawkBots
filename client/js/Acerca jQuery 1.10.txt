@@ -1,0 +1,22 @@
+12/junio2013
+
+jquery-1.10.1.js  --> the compressed, production jQuery 1.10.1
+jquery-1.10.1.min.js --> the uncompressed, development jQuery 1.10.1
+
+http://jquery.com/upgrade-guide/1.9/
+
+jQuery 1.9 removes or modifies several APIs that behaved inconsistently or inefficiently in the past.
+The majority of these changes have been foreshadowed by their deprecation in previous versions of jQuery,
+particularly 1.7 and 1.8.
+
+In making these changes, the team's goal was to fix behavior that makes jQuery inconsistent or hard to use,
+and in the process improve both file size and overall performance.
+
+This list is deceptively foreboding. Most of these changes address special situations and edge cases, and a
+few are changes that have been widely requested where jQuery's historical behavior has been problematic. As
+a first step, the best way to see if your code works is to try it with both jQuery 1.9 and the Migrate Plugin
+as described below.
+
+For now, this guide serves as an appendix to the standard jQuery API documentation, and those pages may not
+describe the behavior of version 1.9. Please be patient while we update the documentation for the individual
+pages at api.jquery.com to reflect the changes in 1.9.
