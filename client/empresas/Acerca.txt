@@ -1,0 +1,10 @@
+Este directorio se utiliza para almacenar las imagenes que suben las empresas de los lugares que desean promocionar.
+
+
+ruta:
+www/[sitio]/empresas/idVuelo/img/idVuelo_##.*
+
+Los archivos se leen automaticamnete del directorio.
+No se especifica en la base de datos. El slice es dinamico segun cuantas imagenes haya en el direcotrio.
+
+Preguntar por el link de como crear un slice de imagenes de forma dinamica leidad de un directorio o buscar en Internet (ingles).
