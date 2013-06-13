@@ -5,7 +5,7 @@
     <title>Hawk Bots</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="dron, turism, travel, quadropter">
-    <meta name="author" content="Hauk bots">
+    <meta name="author" content="Hawk Bots">
 	
     <!-- The styles -->
     <link href="css/bootstrap.css" rel="stylesheet">

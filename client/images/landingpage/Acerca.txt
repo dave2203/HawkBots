@@ -1,0 +1,5 @@
+Imagenes que se muestran en el landingpage.
+
+Esta carpeta es temporal y debe ser elimindo y sustituido por el direcororio llamado "empresas".
+
+El directorio "empresas" contiene las imágenes subidas por las empresas, de ahi hay que leer las imagenes.
