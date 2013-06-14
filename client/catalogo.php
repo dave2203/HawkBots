@@ -5,9 +5,9 @@
 	$querySelect =" SELECT
 		vuelo.idVuelo,
 		vuelo.nombre,
-		cat_paises.long_name,
-		cat_estados.long_name,
-		cat_city.long_name,
+		cat_paises.long_name AS pais,
+		cat_estados.long_name AS estado,
+		cat_city.long_name AS city,
 		Sum(dronOnline.isOnline) AS Avalaible
 	FROM
 		vuelo
@@ -38,14 +38,14 @@
 	//exit;								//debug
 	//echo htmlentities($row['Avalaible']);
 ?>
-<table>
+
+<table class="table table-hover table-striped .table-bordered">
 	<thead>
 		<tr>
 			<th>Flag</th>
 			<th>Place</th>
 			<th>Name</th>
 			<th>Picture</th>
-			<th>Demo video</th>
 			<th>Availability</th>
 			<th>Details</th>
 		</tr>
@@ -56,18 +56,20 @@
 		?>
 		<tr>
 			<td><?php echo "flag image" ?></td>
-			<td><?php echo "Place" ?></td>
-			<td><?php echo "Name" ?></td>
-			<td><?php echo "Random pictur" ?></td>
-			<td><input id="videodemo-btn" type="button" value="See video demo"/></td>
+			<td>
+				<?php echo htmlentities($row['pais']).', '.htmlentities($row['estado']).', '.htmlentities($row['city']); ?>
+			</td>
+			<td><?php echo htmlentities($row['nombre']); ?></td>
+			<td><img src="" /><?php echo "Random pictur" ?></td>
 			<td><?php echo htmlentities($row['Avalaible']); ?></td>
-			<td><a href="indexcliente.php?menu=vue_det&v=2">Ver</a></td>
+			<td><a class="btn" href="indexcliente.php?menu=vue_det&v=2">Ver</a></td>
 		</tr>
 		<?php
 			} while ($row = mysql_fetch_assoc($result));
 		?>
 	</tbody>
 </table>
+<script type="text/javascript" src="js/catalogo.js"></script>
 <?php
 	mysql_free_result($result);
 	mysql_close($link);

@@ -12,6 +12,13 @@
     <meta name="description" content="dron, turism, travel, quadropter">
     <meta name="author" content="Hawk Bots">
 	
+	<!-- The javascript -->
+	<?php
+		if(isset($_GET["menu"]) ){
+			require('indexcliente_headerloader.php');
+		}
+	?>	
+	
     <!-- The styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -29,7 +36,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>    
     
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+	
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

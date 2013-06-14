@@ -1,6 +1,7 @@
 <?php
 /* Insertar las diferentes paginas que se visualizaran en el contenedor "principal"
-del archivo indexcliente.php.
+ * del archivo indexcliente.php.
+ * * Los elementos del swith se deben sincronizar con indexcliente_headerloader.php s es necesario.
    Llamado por:	indexcliente.php
 */
 if( isset($_GET["menu"]) )
@@ -39,6 +40,11 @@ if( isset($_GET["menu"]) )
 		// Servicio audio. /<nombre archivo>.php
 		case "serv_re":
 			$pagina = "Pendiente"; 
+			break;
+			
+		// Tutorial interactivo. /<nombre archivo>.php
+		case "tut":
+			$pagina = "tutorialTrainigInterac.php"; 
 			break;
 	}
 	require($pagina);
