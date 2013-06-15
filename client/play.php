@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="row-fluid" style="display: block;" >
-		<div style="width: 1px; margin: 0.25em auto;">
+		<div style="width: 1px; margin: 0 auto;">
     	<video id="videoMain_1" class="video-js vjs-default-skin" controls preload="none" data-setup="{}" width="300px">
 			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
 		</video>

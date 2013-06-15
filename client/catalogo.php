@@ -66,8 +66,6 @@ do{
 	}
 	} while ($row = mysql_fetch_assoc($result));
 ?>
-	
-
 <script type="text/javascript" src="js/catalogo.js"></script>
 <?php
 	mysql_free_result($result);
