@@ -108,16 +108,12 @@
             </ul>
         </div><!-- /flexslider -->
     </section><!-- #slider -->
-    <div id="mainContainer" class="container-fluid">
-        <div class="row-fluid">
-        	<div id="content-div">
+    <div class="container-fluid">
         		<?php
 					if(isset($_GET["menu"]) ){
 						require('indexcliente_contentloader.php');
 					}
-				?>			  
-			</div>
-        </div>
+				?>
     </div>
     <hr>
 	<div id="footerwrap">
