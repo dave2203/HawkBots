@@ -1,3 +1,8 @@
+<?php
+	if(!isset($_GET["menu"]) ){
+		$_GET["menu"]="prcp";	//index_content.php es la pagina de presentacion inicial.
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="dron, turism, travel, quadropter">
     <meta name="author" content="Hawk Bots">
+	
+	<!-- The javascript -->
+	<?php
+		if(isset($_GET["menu"]) ){
+			require('indexcliente_headerloader.php');
+		}
+	?>	
 	
     <!-- The styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -24,7 +36,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>    
     
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+	
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -47,132 +59,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html"><img src="images/logosmall.png" alt="Hawk Bots"></a>
+          <a class="brand" href="indexcliente.php"><img src="images/logo/HackBotsLogoBlanco_68x19pix.png" alt="Hawk Bots logo"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
             	<li class="dropdown active">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Homes <b class="caret"></b></a>
+            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+            		<ul class="dropdown-menu">
+            			<li class="active"><a href="indexcliente.php">Main Home Page</a></li>
+            		</ul>
+            	</li>
+            	<li class="dropdown">
+            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Recorridos <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li class="active"><a href="index.html">Main Home Page</a></li>
-                    	<li><a href="index2.html">Home with Carousel</a></li>
-                    	<li><a href="index3.html">Home with Flexslider</a></li>
-                    	<li><a href="index4.html">Home Short Version</a></li>
-                    	<li><a href="index5.html">Home with Portfolio</a></li>
-                    	<li><a href="index7.html">Home Page Varation</a></li>
+                    	<li><a href="indexcliente.php?menu=catv">Catalogo</a></li>
                     </ul>
             	</li>
             	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="about.html">About Page Ver. 1</a></li>
-                    	<li><a href="about2.html">About Page Ver. 2</a></li>
-                    	<li><a href="about3.html">About Page Ver. 3</a></li>
-	                    <li class="divider"></li>
-                    	<li><a href="team.html">Team Page Ver. 1</a></li>
-                    	<li><a href="team2.html">Team Page Ver. 2</a></li>
-                    	<li><a href="team3.html">Team Page Ver. 3</a></li>
-                    	<li><a href="team4.html">Single Team Member</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="services.html">Services Page</a></li>
-                    	<li><a href="services2.html">Services Page w/Sidebar</a></li>
-                    	<li><a href="services3.html">Services Page Variation</a></li>
-                    	<li><a href="services4.html">Services Page w/Carousel</a></li>
-	                    <li class="divider"></li>
-                    	<li><a href="pricingtable.html">Pricing Tables Ver. 1</a></li>
-                    	<li><a href="pricingtable2.html">Pricing Tables Ver. 2</a></li>
-                    	<li><a href="pricingtable3.html">Pricing Tables Ver. 3</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="clients.html">Clients Page</a></li>
-                    	<li><a href="clients2.html">Clients Page Variation</a></li>
-	                    <li class="divider"></li>
-                    	<li><a href="testimonials.html">Testimonials Page</a></li>
-                    	<li><a href="testimonials2.html">Testimonial Page Variation</a></li>
-	                    <li class="divider"></li>
-                    	<li><a href="career.html">Careers Page</a></li>
-                    	<li><a href="career2.html">Career Details Page</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="faq.html">FAQ Page</a></li>
-                    	<li><a href="features.html">Features Page</a></li>
-                    	<li><a href="skills.html">Skills Page</a></li>
-                    	<li><a href="fullwidth.html">Full Width Page</a></li>
-                    	<li><a href="mediumfooter.html">Footer Variation</a></li>
-                    	<li><a href="bigfooter.html">Large Footer Version</a></li>
-                    	<li><a href="sitemap.html">Sitemap Page</a></li>
-                    	<li><a href="timeline.html">Timeline Page</a></li>
-                    	<li><a href="login.html">Login Page</a></li>
-                    	<li><a href="login2.html">Login Page Variation</a></li>
-                    	<li><a href="register.html">Register Page</a></li>
-                    	<li><a href="404.html">404 Error Page</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Special <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="landing.html">Landing Page</a></li>
-                    	<li><a href="landing2.html">Landing Page Variation</a></li>
-                    	<li><a href="comingsoon.html">Coming Soon Page</a></li>
-                    	<li><a href="comingsoon2.html">Coming Soon w/Countdown</a></li>
-                    	<li><a href="onepage.html">One Page Theme</a></li>
-                    	<li><a href="vcard.html">Vcard Page</a></li>
-                    	<li><a href="resume.html">Resume Page</a></li>
-                    	<li><a href="event.html">Event Page</a></li>
-                    	<li><a href="dribbble.html">Dribbble Shots Widget</a></li>
-                    	<li><a href="pinterest.html">Pinterest Widget</a></li>
-                    	<li><a href="instagram.html">Instagram Widget</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolios <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="portfolio.html">Basic Portfolio Page</a></li>
-                    	<li><a href="portfolio2.html">2 Columns Portfolio</a></li>
-                    	<li><a href="portfolio3.html">3 Columns Portfolio</a></li>
-                    	<li><a href="portfolio4.html">4 Columns Portfolio</a></li>
-                    	<li><a href="portfolio5.html">3 Columns Circle Items</a></li>
-                    	<li><a href="portfolio6.html">4 Columns Circle Items</a></li>
-                    	<li><a href="portfolio7.html">Portfolio Triangle Variation</a></li>
-                    	<li><a href="portfolio8.html">Portfolio Hexagon Variation</a></li>
-                    	<li><a href="portfolio10.html">Single Item</a></li>
-                    	<li><a href="portfolio11.html">Single Item Right Sidebar</a></li>
-                    	<li><a href="portfolio12.html">Single Item left Sidebar</a></li>
-                    	<li><a href="portfolio13.html">Single Item 2 Sidebars</a></li>
-                    	<li><a href="portfolio14.html">Single Video Item</a></li>
-                    	<li><a href="portfolio15.html">Single Video Item Variation</a></li>
-	                    <li class="divider"></li>
-                    	<li><a href="case.html">Case of Study</a></li>
-                    	<li><a href="case2.html">Case of Study Variation</a></li>
-                    </ul>
-            	</li>
-            	<li class="dropdown">
-            		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    	<li><a href="blog.html">Blog Classic</a></li>
-                    	<li><a href="blog2.html">Blog Variation</a></li>
-                    	<li><a href="blog3.html">Blog Variation 2</a></li>
-                    	<li><a href="blog4.html">Blog Variation 3</a></li>
-                    	<li><a href="blog5.html">Single Post Right Sidebar</a></li>
-                    	<li><a href="blog6.html">Single Post Left Sidebar</a></li>
-                    	<li><a href="blog7.html">Single Post Double Sidebar</a></li>
+                    	<li><a href="services.html">Fotos</a></li>
+                    	<li class="divider"></li>
+                    	<li><a href="services2.html">Video</a></li>
+                    	<li class="divider"></li>
+                    	<li><a href="services3.html">Recorridos</a></li>
                     </ul>
             	</li>
             	<li class="dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     	<li><a href="contact.html">Contact Page</a></li>
-                    	<li><a href="contact2.html">Contact Page w/Map</a></li>
-                    	<li><a href="contact3.html">Contact Page Map Variation</a></li>
+                    	<li><a href="contact2.html">Trainig</a></li>
+                    	<li><a href="contact2.html">Forum</a></li>
                     </ul>
             	</li>
             </ul>
@@ -191,35 +108,21 @@
             </ul>
         </div><!-- /flexslider -->
     </section><!-- #slider -->
-    <div id="mainContainer" class="container-fluid">
-        <div class="row-fluid">
-            <div class="span6 hero-unit rightline">
-                <h1>Instructions/Tutorial</h1>
-                <p>See a tutorial about how control the device.</p>
-                <div class="middle">
-                    <p>
-                        <a class="btn btn-large btn-primary">Learn</a>
-                    </p>
-                </div>
-            </div>
-            <div class="span6 hero-unit">
-                <h1>Start travel</h1>
-                <p>Click the below button to start the travel</p>
-                <div class="middle">
-                    <p>
-                        <a class="btn btn-large btn-primary">Start</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid">
+        		<?php
+					if(isset($_GET["menu"]) ){
+						require('indexcliente_contentloader.php');
+					}
+				?>
     </div>
     <hr>
 	<div id="footerwrap">
-	<em>MADE IN MADRID</em>
+	<em>&copy; IRON DRONE Inc. 2013.All rights reserved. Terms and 
+	Conditions. See our Privacy Policy</em>
 	<br>
 	<br>
-	<p>ST. PATRICK AVE.</p>
-	<p>2099, MADRID</p>
+	<p>Tijuana</p>
+	<p>C.P. ###, Mexico</p>
 	<br>
 	<p><a href="#">GET DIRECTIONS</a></p>
 	<br>
@@ -238,10 +141,15 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!--
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	-->
+	<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
     <script type="text/javascript" src="js/onepage/js/main.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-
+	<script type="text/javascript" src="js/indexcliente.js"></script>
   </body>
 </html>

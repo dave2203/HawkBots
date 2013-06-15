@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+html, body {
+	height:100%;
+}
+
+#header {
+	background:url(img/bg-header_hawkbots.png) no-repeat #808080;
+	border-bottom:1px solid #000000;
+	height:129px;
+	margin:auto;
+}
+#headerRepeat {
+	position:fixed;
+	left:1024px;
+	top:0px;
+	background:url(img/bg-header_repeat_hawkbots.png) repeat-x top left;
+	height:130px;
+	width:100%;
+}
+
+
+
+#footer {
+	background:url(img/bg-footer.png) repeat-x;
+	border-top:1px solid #000000;
+	height:185px;
+	margin:auto;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	
+	text-align:center;
+	
+	padding-top:7px;
+}
+
+#gigapixel {
+	height:280px;
+	margin:auto;
+	
+	text-align:center;
+	font-weight:bold;
+}
