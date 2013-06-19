@@ -1,4 +1,3 @@
-
 <?php
 	include_once("coneccion/conn.php");
 	$link = conn();

@@ -33,6 +33,8 @@ if( isset($_GET["menu"]) )
 			<link href="players/video-js/video-js.css" rel="stylesheet" type="text/css">
 			<!-- video.js must be in the <head> for older IEs to work. -->
 			<script type="text/javascript" src="players/video-js/video.js"></script>
+			
+			<link rel="stylesheet" media="screen" type="text/css" title="Design" href="css/playVideoFull.css">
 			<?php 
 			break;
 	}

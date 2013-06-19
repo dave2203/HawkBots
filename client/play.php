@@ -13,7 +13,7 @@
 	    <p>Click the below button to start the travel</p>
 	    <div class="middle">
 	        <p>
-	            <a class="btn btn-large btn-primary" href="indexcliente.php?menu=vue_pla">Start</a>
+	            <a class="btn btn-large btn-primary" href="indexcliente.php?menu=vue_pla&v=<?php echo $_GET["v"] ?>">Start</a>
 	        </p>
 	    </div>
 	</div>
@@ -27,10 +27,11 @@
 		</div>
 	</div>
 	<div class="row-fluid" style="display: block;" >
-		<div style="width: 1px; margin: 0 auto;">
-    	<video id="videoMain_1" class="video-js vjs-default-skin" controls preload="none" data-setup="{}" width="300px">
+		<div style="width: 100%; height:800px; margin: 0 auto;">
+    	<video id="videoMain_1" class="video-js vjs-default-skin" controls preload="none" data-setup="{}" width="100%" height="100%">
 			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
 		</video>
+		Hola
 		</div>
 	</div>
 </div>

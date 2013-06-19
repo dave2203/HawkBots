@@ -26,7 +26,10 @@ if( isset($_GET["menu"]) )
 			
 		// Pantalla previa a reproducir. /play.php
 		case "vue_pla":
-			$pagina = "playMenu.php"; 
+			//$pagina = "playMenu.php";
+			//$pagina = "playVideoFull.php";				//Reproductor de pantalla completa.
+			header("Location: playVideoFull.php");
+			exit();											//Se redirige a otra pagina. 
 			break;
 		
 		// Servicio audio. /<nombre archivo>.php
