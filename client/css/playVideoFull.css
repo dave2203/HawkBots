@@ -1,6 +1,3 @@
-@charset "utf-8";
-/* CSS Document */
-
 * {
 	margin:0;
 	padding:0;
@@ -11,19 +8,21 @@ html, body {
 	height:100%;
 }
 
-header, footer {
+aside, header, footer{
 	background: rgba(0,0,0,0.25);
-
+	
 	margin:0;
 	padding:0;
-
+	
 	position:fixed;
+}
+
+header, footer {
 	left:0px;
 	right: 0px;
 
 	width: 100%;
 
-	text-align:center;
 	text-shadow: 1px 1px 1px black;
 
 	z-index: 2;				/*Traer enfrente*/
@@ -31,9 +30,8 @@ header, footer {
 
 header {
 	/*background:url(img/bg-header_hawkbots.png) no-repeat #808080;*/
-	text-align: left;
 	border-bottom:1px solid rgba(0,0,0,0.3);
-	height:10%;
+	/*height:10%;*/
 	padding-bottom: 7px;
 	top: 0px;
 
@@ -41,12 +39,213 @@ header {
 	-webkit-box-shadow: inset 0px -42px 81px -42px rgba(255,255,255,1);
 	-moz-box-shadow: inset 0px -42px 81px -42px rgba(255,255,255,1);
 	box-shadow: inset 0px -42px 81px -42px rgba(255,255,255,1);*/
-	box-shadow: inset 0px -1px rgba(255,255,255,0.3), inset 0 -1px rgba(255,255,255,0.2), inset 0 -10px 20px rgba(255,255,255,0.25), inset 0 15px 30px rgba(0,0,0,1.0), inset 200px -1px 100px -27px rgba(255,255,255,0.3);		/**Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+	box-shadow: inset 0px -1px rgba(255,255,255,0.3),
+				inset 0 -1px rgba(255,255,255,0.2),
+				inset 0 -10px 20px rgba(255,255,255,0.25),
+				inset 0 15px 30px rgba(0,0,0,1.0),
+				inset 200px -1px 100px -27px rgba(255,255,255,0.3); /* Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+				
+	
 }
 
 img { max-width: 100%;} 				/*Ensure that images will never be bigger than their parent container.*/
 										/* Please note that the max-width directive is not recognized by older browsers such as IE6.*/
-											   
+								
+/* Google Map */
+aside {
+	top:15%;
+	bottom: 10%;
+
+	width: 30%; /* 30%*/
+
+	text-align:center;
+	text-shadow: 1px 1px 1px black;
+
+	z-index: 3;				/*Traer enfrente*/
+			   
+	/*Effects*/
+	-webkit-box-shadow: inset 1px 0px 0px 0px rgba(255,255,255,0.3),
+						inset 1px 0px 0px 0px rgba(255,255,255,0.2),
+						inset 10px 0px 20px 0px rgba(255,255,255,0.25),
+						inset 15px 0px 30px 0px rgba(0,0,0,1.0);
+	-moz-box-shadow: inset 1px 0px 0px 0px rgba(255,255,255,0.3),
+					inset 1px 0px 0px 0px rgba(255,255,255,0.2),
+					inset 10px 0px 20px 0px rgba(255,255,255,0.25),
+					inset 15px 0px 30px 0px rgba(0,0,0,1.0);
+	box-shadow: inset 1px 0px 0px 0px rgba(255,255,255,0.3),
+				inset 1px 0px 0px 0px rgba(255,255,255,0.2),
+				inset 10px 0px 20px 0px rgba(255,255,255,0.25),
+				inset 15px 0px 30px 0px rgba(0,0,0,1.0);
+	
+	
+	border: 1px 1px 0px 1px solid rgba(0,0,0,0.3);
+	right:0px;
+	padding-left:7px;
+}
+
+.asideClosed{
+	width:1px;
+	-webkit-transition: width 0.2s ease;  
+    -moz-transition: width 0.2s ease;  
+    -o-transition: width 0.2s ease;  
+    -ms-transition: width 0.2s ease;  
+    transition: width 0.3s ease;
+}
+.asideOpen{
+	width:30%;
+	-webkit-transition: width 0.3s ease;  
+    -moz-transition: width 0.3s ease;  
+    -o-transition: width 0.3s ease;  
+    -ms-transition: width 0.s ease;  
+    transition: width 0.3s ease;  
+}
+
+#headerLogo, #headerNav{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#headerLogo{
+	width: 20%;
+}
+
+#headerNav{
+	width: 79%;
+	text-align:right;
+}
+
+/* **********  MENU *********** */
+nav{
+	top:0;
+	right: 0px;
+}
+nav ul ul {
+	display: none;		/* First hide the sub menus by targeting any UL’s within a UL with the display:none; declaration.*/
+}
+
+nav ul li:hover > ul {
+		display: block;
+		/* Second, in order to make these menus reappear they need to be converted back to block elements on hover of the LI.
+		 * The > child selector makes sure only the child UL of the LI being hovered is targeted, rather than all
+		 *   sub menus appearing at once.
+		 */
+}
+
+/*Thirt, apply style to main mavigation menu with CSS3 properties:*/
+nav ul {
+	background: #efefef; 												/* Gray */
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);			/* gradients */  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 	/* gradients */
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);  /* gradients */
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);							/* box shadows and border radius. */
+	padding: 0 20px;
+	border-radius: 10px;  												/* border radius. */
+	list-style: none;													/* Quitar la bolita de lista */
+	 
+	/* Four, Adding position:relative; will allow us to absolutely position the sub menus according to this main nav bar
+	 * 
+	 * The relative value allows you to use box offset properties such as top, right, bottom and left. No break the element
+	 * from the normal flow of a document, this like static.
+	 * Osea que hace que se vea en la posicion en que fue declarado y como una lista continua,
+	 * si fuera 'absolute' entonces aparecen los <ul> pero se superponen los unos sobre otros.
+	 * */
+	position: relative;
+	
+	/*Five, the display:inline-table will condense the width of the menu to fit.
+	 * 
+	 * 
+	 * The element is displayed as an inline-level table. Basically sets the table without line breaks before and after it.
+	 * Visualmente hace que visulamente no se expanda toda lapantalla cada uno de los elementos <li>.
+	 */
+	display: inline-table;												
+}
+
+/*Six, The clearfix style rule will clear the floats used on the subsequent list items without the use of overflow:hidden,
+ * which would hide the sub menus and prevent them from appearing. */
+nav ul:after {
+		content: "";
+		clear: both;
+		display: block;
+}
+
+nav ul li {
+	float: left;		/* Hacer que todos sean flotantes y se alinien a la izquierda. */
+}
+
+
+/* The individual menu items are then styled up with CSS rules added to the <li> and the nested anchor. 
+ * In the browser this will make the link change to a blue gradient background and white text.
+ */
+nav ul li:hover {
+	background: #4b545f;			/* Cambia a azul el fondo de los elementos de la lista a color azul. */
+	background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+nav ul li:hover a {
+	color: #fff;							/* Cambiar el color de la letra de los <a> a blanco cuando el mouse este ensima. */
+}
+
+nav ul li a {
+	display: block;						/* Hacer que los <a> se visualizen como bloques (si no se comportan como inline y no
+										   respetan la propiedad de altura del pading), trataran de aoupar todo el espacio.*/
+	padding: 25px 40px;					/* Poner separacion, y hacer que parescan rectangulos.*/
+	color: #757575;						/* Color grisaceo. */
+	text-decoration: none;				/* Quitar el subrayado del texto*/
+}
+
+/* Formatear el primer nivel de submenu */
+/*  They are currently inheriting styles from their parent elements, so a change of background and the removal of
+ 	  the border-radius and padding fixes their appearance.*/ 
+nav ul ul {
+	background: #5f6975;				/* */				
+	border-radius: 0px;					/* */
+	padding: 0;
+	position: absolute;					/* The absolute value allows you to use box offset properties such as top, right,
+											bottom and left and no break the element from the normal flow of a document.  
+											Hacer que los <ul> aparescan uno debajo del otro.
+											Hace que el primer nivel de submenus se apilen.
+										*/
+	top: 100%;							/* To make sure they fly out underneath the main menu they are positioned absolutely
+											100% from the top of the UL (ie, the bottom).
+	                  					   Hacer que los submenus se separen de su antecesor todo lo que el mismo mide ya que
+											todos los ul miden lo mismo. Si no midieran lo mismo talvez habria que hacer cambios.
+											
+										*/
+}
+
+/* Formatear los elementos de la lista del primer nivel de submenu.
+   The LI’s of each UL in the sub menu don’t need floating side by side, instead they’re listed vertically with thin
+ 	 borders separating each one.
+ * */
+nav ul ul li {
+	float: none; 						/* Reorna a valor por defecto????  */
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a;
+	position: relative;					/*	Cada elemento de lista puesde utilizar las propiedades de posicionameinto.
+											El flujo de los elementos es el normal, osea en el orden de su declaracion.	*/
+}
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #fff;
+}
+nav ul ul li a:hover {
+	background: #4b545f;			/* A quick hover effect then darkens the background to act as a visual cue. */
+}
+
+/*  The main navigation bar is now all styled up, but the sub menus still need some work.
+ 	The final step is to position the sub-sub-menus accordingly. These menus will be inheriting all the
+ 	 sub-menu styling already, so all they need is to be positioned absolutely to the right (left:100%) of the
+ 	 relative position of the parent <li>.
+ * */ 
+nav ul ul ul {
+	position: absolute;					/* Permite usar top para posicionar y cambia el origen y cambia el modo de
+											flujo de los elementos.*/
+	left: 100%;							/* COn esto se mueven a la derecha.*/
+	top:0;
+}
+
+
 
 
 section#videoPlayer {
@@ -56,9 +255,38 @@ section#videoPlayer {
 
 
 footer {
-	box-shadow: inset 0 1px rgba(255,255,255,0.3), inset 0 1px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,1.0);		/**Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+	-webkit-box-shadow: inset 0 1px rgba(255,255,255,0.3),
+				inset 0 1px rgba(255,255,255,0.2),
+				inset 0 10px 20px rgba(255,255,255,0.25),
+				inset 0 -15px 30px rgba(0,0,0,1.0);		/**Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+	-moz-box-shadow: inset 0 1px rgba(255,255,255,0.3),
+				inset 0 1px rgba(255,255,255,0.2),
+				inset 0 10px 20px rgba(255,255,255,0.25),
+				inset 0 -15px 30px rgba(0,0,0,1.0);		/**Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+	box-shadow: inset 0 1px rgba(255,255,255,0.3),
+				inset 0 1px rgba(255,255,255,0.2),
+				inset 0 10px 20px rgba(255,255,255,0.25),
+				inset 0 -15px 30px rgba(0,0,0,1.0);		/**Un pixel de sombra ariba y abajo., el segundo es un pixel mas suave.*/
+				
 	border-top: 1px solid rgba(0,0,0,0.3);
 	bottom:0px;
-	height:20%;
 	padding-top:7px;
+}
+
+.footerClosed{
+	height:4%;
+	-webkit-transition: height 0.3s ease;  
+    -moz-transition: height 0.3s ease;  
+    -o-transition: height 0.3s ease;  
+    -ms-transition: height 0.3s ease;  
+    transition: height 0.3s ease;  
+}
+
+.footerOpen{
+	height:30%;
+	-webkit-transition: height 0.2s ease;  
+    -moz-transition: height 0.2s ease;  
+    -o-transition: height 0.2s ease;  
+    -ms-transition: height 0.2s ease;  
+    transition: height 0.2s ease;  
 }

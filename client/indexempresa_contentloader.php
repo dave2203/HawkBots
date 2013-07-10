@@ -42,7 +42,12 @@ if( isset($_GET["menu"]) )
 		case "serv_re":
 			$pagina = "Pendiente"; 
 			break;
-			
+		
+		// Compra de viaje
+		case 'cartVuelo':
+			$pagina = "cartVuelo.php";
+			break;
+		
 		// Tutorial interactivo. /<nombre archivo>.php
 		case "tut":
 			$pagina = "tutorialTrainigInterac.php"; 

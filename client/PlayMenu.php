@@ -36,13 +36,13 @@ $player = 1;
 ?>
 <div class="row-fluid">
 	<!-- Player -->
-	<div id="videoContainer" class="span10">
+	<div id="videoContainer" class="span10" style="width: 100%; height:400px; margin: 0 auto;" >
 	<?php
 	switch ($player) {
 		case 1:
 			//video-js
 			?>
-		<video id="videoMain_1" class="video-js vjs-default-skin" controls preload="none" width="840" height="364"
+		<video id="videoMain_1" class="video-js vjs-default-skin" controls preload="none" width="100%" height="100%"
 			data-setup="{}">
 			<!--
 			<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
